@@ -19,7 +19,6 @@ describe('#Saga: startSession', () => {
 
 describe('#Saga: fetchBeers', () => {
   it('should fetch beers if it is not already fetching', () => {
-    /*
     const fetchBeersGenerator = fetchBeers()
 
     const selectIsFetching = fetchBeersGenerator.next()
@@ -46,17 +45,14 @@ describe('#Saga: fetchBeers', () => {
 
     action = fetchBeersGenerator.next()
     expect(action.value.PUT.action).to.be.deep.equal({ type: FETCHING_BEERS, isFetching: false })
-    */
   })
 
   it('should NOT fetch beers if it is already fetching beers', () => {
-    /*
     const fetchBeersGenerator = fetchBeers()
     const selectIsFetching = fetchBeersGenerator.next()
     expect(selectIsFetching.value.SELECT.selector).to.be.equal(isFetchingBeers)
 
     const yieldedOutput = fetchBeersGenerator.next(true)
     expect(yieldedOutput.done).to.be.equal(true)
-    */
   })
 })
