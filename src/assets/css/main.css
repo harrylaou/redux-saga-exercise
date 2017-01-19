@@ -409,6 +409,14 @@ h3.beer_title {
   margin-top: 6px;
 }
 
+.beer-col .beer-img i {
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top:-21px;
+  margin-left:-27px
+}
+
 .beer-img .img-responsive {
   display: inline;
 }
