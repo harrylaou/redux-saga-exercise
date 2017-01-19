@@ -29,6 +29,9 @@ export const setCurrentBeerIndex = (currentIndex:number) => ({
   currentIndex
 })
 
+// Tip: you must replace the following two functions
+// with two simpler actions... level 1 maybe?
+
 /* I'm an action that returns promises (LEVEL 2!)  */
 export const startSession = () => (
   api.startSession().then(receiveSession)
@@ -50,13 +53,3 @@ export const fetchBeers = () => (dispatch, getState) => {
       dispatch(fetchingBeers(false))
     })
 }
-
-/*
-export const fetchBeers = () => ({
-  type: FETCH_BEERS
-})
-
-export const startSession = () => ({
-  type: START_SESSION
-})
-*/
