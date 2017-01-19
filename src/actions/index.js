@@ -8,7 +8,7 @@ export const RECEIVE_BEERS = 'RECEIVE_BEERS'
 export const RECEIVE_SESSION = 'RECEIVE_SESSION'
 export const START_SESSION = 'START_SESSION'
 
-/* I'm an action creator (LEVEL 1!)  */
+
 export const receiveSession = (session:Object) => ({
   type: RECEIVE_SESSION,
   session
@@ -29,29 +29,6 @@ export const setCurrentBeerIndex = (currentIndex:number) => ({
   currentIndex
 })
 
-/* I'm an action that returns promises (LEVEL 2!)  */
-export const startSession = () => (
-  api.startSession().then(receiveSession)
-)
-
-/* I'm an action that dispatches other actions (LEVEL 3!)  */
-export const fetchBeers = () => (dispatch, getState) => {
-  const state = getState()
-  if (state.beers.isFetching) {
-    return
-  }
-  dispatch(fetchingBeers(true))
-  api.getBeers(state.settings.session.id)
-    .then((beers) => {
-      dispatch(fetchingBeers(false))
-      dispatch(receiveBeers(beers)
-    )
-    }).catch(() => {
-      dispatch(fetchingBeers(false))
-    })
-}
-
-/*
 export const fetchBeers = () => ({
   type: FETCH_BEERS
 })
@@ -59,4 +36,3 @@ export const fetchBeers = () => ({
 export const startSession = () => ({
   type: START_SESSION
 })
-*/
