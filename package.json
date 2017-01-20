@@ -26,8 +26,8 @@
     "saga",
     "redux-saga"
   ],
-  "author": "ReactJS University",
-  "license": "MIT",
+  "author": "ReactJS Academy",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/reactjs-academy/redux-saga-exercise/issues"
   },
