@@ -1,3 +1,4 @@
+import { call, put } from 'redux-saga/effects'
 import { getBeers, startSession as apiStartSession } from '../api'
 import { fetchingBeers, receiveSession, FETCHING_BEERS, RECEIVE_BEERS } from '../actions'
 import { fetchBeers, startSession } from './'
@@ -10,10 +11,10 @@ describe('#Saga: startSession', () => {
     const startSessionGenerator = startSession()
 
     const callApiStartSession = startSessionGenerator.next()
-    expect(callApiStartSession.value.CALL.fn).to.be.deep.equal(apiStartSession)
+    expect(callApiStartSession.value).to.be.deep.equal(call(apiStartSession))
 
     const putStartSession = startSessionGenerator.next(session)
-    expect(putStartSession.value.PUT.action).to.be.deep.equal(receiveSession(session))
+    expect(putStartSession.value).to.be.deep.equal(put(receiveSession(session)))
   })
 })
 
@@ -23,6 +24,6 @@ describe('#Saga: fetchBeers', () => {
   })
 
   it('should NOT fetch beers if it is already fetching beers', () => {
-    
+
   })
 })
