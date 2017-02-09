@@ -29,9 +29,6 @@ class TinderContainer extends Container {
   next = (nextBeerIndex:?number) => {
     const nextBeerIdx = this.props.currentBeerIndex + 1
     this.props.setCurrentBeerIndex(nextBeerIdx)
-    if ((this.props.beers.length - nextBeerIdx) <= BEER_LIMIT_PER_PAGE) {
-      this.props.fetchBeers()
-    }
   }
 
   like = () => {
