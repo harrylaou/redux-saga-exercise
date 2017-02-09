@@ -22,3 +22,7 @@ You need to have `node`and `npm`installed in your computer.
 3. Move the logic inside fetchBeers action (it uses the thunk middleware) in src/actions/index.js to a saga in src/sagas/index
 4. Execute `npm test`. We have 3 tests in src/sagas/index.spec.js. One is implemented "#Saga: startSession". You need to implement the two in "#Saga: fetchBeers"
 5. Bonus. Have you got some extra time? implement a reducer, action and saga so every time the user likes a beer it is stored in the state. Display the list of liked beers in components/Navigations/Menu.jsx where it says "This is exercise question 5 ;)"
+
+## License
+
+This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
