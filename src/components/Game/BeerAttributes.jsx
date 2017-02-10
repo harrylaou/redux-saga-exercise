@@ -3,19 +3,19 @@ import React from 'react'
 const BeerAttributes = ({ beer }) => (
   <ul className="beer_details">
     <li>
-      <span>{beer.attr.country}</span>&nbsp;Country
+      <span>{beer.country}</span>&nbsp;Country
     </li>
     <li>
-      <span>{beer.attr.type}</span>&nbsp;Style
+      <span>{beer.type_beer}</span>&nbsp;Style
     </li>
     <li>
-      <span>{beer.attr.color}</span>&nbsp;Colour
+      <span>{beer.colour}</span>&nbsp;Colour
     </li>
     <li>
-      <span>{beer.attr.volume ? beer.attr.volume.replace('cL', '') : ' '}</span>&nbsp;cl
+      <span>{beer.size ? beer.size.toLowerCase().replace('cl', '') : ' '}</span>&nbsp;cl
     </li>
     <li>
-      <span>{beer.attr.alc}</span>&nbsp;°Alcohol
+      <span>{beer.graduation}</span>&nbsp;°Alcohol
     </li>
     <li>
       <span>

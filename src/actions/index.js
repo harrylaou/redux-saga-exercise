@@ -1,6 +1,4 @@
 // @flow
-import * as api from '../api'
-
 export const CURRENT_BEER_INDEX = 'CURRENT_BEER_INDEX'
 export const FETCH_BEERS = 'FETCH_BEERS'
 export const FETCHING_BEERS = 'FETCHING_BEERS'

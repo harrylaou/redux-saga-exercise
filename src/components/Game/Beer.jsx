@@ -45,7 +45,7 @@ class Beer extends React.Component {
                   height={`${this.img_height}px`} style={{ height: this.img_height, color: 'red' }}
                   className="img-responsive"
                   ref={node => this.beerImg = node}
-                  src={beer.images.medium}
+                  src={beer.photo_link}
                   onLoad={imageLoaded}
                   onError={() => { this.props.setLoadingBeer(false) }}
                   role="presentation"

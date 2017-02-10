@@ -31,9 +31,6 @@ class Main extends React.Component {
               <a className="navbar-brand" href="https://reactjs.academy" target="_blank" rel="noopener noreferrer">ReactJS Academy</a>
             </div>
             <ul className="nav navbar-nav pull-right">
-              <li className="hidden-xs">
-                <a href="https://reactjs.academy/react-redux-training-london" target="_blank" rel="noopener noreferrer">React Redux London</a>
-              </li>
               <li>
                 <button onClick={this.toggleMenu} className="btn btn-lg btn-outline">
                   <i className="fa fa-heart" />
