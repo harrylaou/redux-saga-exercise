@@ -33,23 +33,17 @@ export const setCurrentBeerIndex = (currentIndex:number) => ({
 // with two simpler actions... level 1 maybe?
 
 /* I'm an action that returns promises (LEVEL 2!)  */
-export const startSession = () => (
-  api.startSession().then(receiveSession)
-)
+// export const startSession = () => (
+//   api.startSession().then(receiveSession)
+// )
+
+
+export const startSession = () => ({
+  type: START_SESSION
+})
+
 
 /* I'm an action that dispatches other actions (LEVEL 3!)  */
-export const fetchBeers = () => (dispatch, getState) => {
-  const state = getState()
-  if (state.beers.isFetching) {
-    return
-  }
-  dispatch(fetchingBeers(true))
-  api.getBeers(state.settings.session.id)
-    .then((beers) => {
-      dispatch(fetchingBeers(false))
-      dispatch(receiveBeers(beers)
-    )
-    }).catch(() => {
-      dispatch(fetchingBeers(false))
-    })
-}
+export const fetchBeers = () => ({
+  type: FETCH_BEERS
+})
